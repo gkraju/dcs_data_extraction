@@ -28,10 +28,11 @@ function LuaExportAfterNextFrame()
 	local mach = LoGetMachNumber()
 	local ss = LoGetSlipBallPosition()
 	local p, b, y = LoGetADIPitchBankYaw()
+	local r = rrudder
 
 	
 	--socket.try(MySocket:send(string.format("RadAlt [m]: %.4f \t IAS: %.4f \t AoA: %.4f\n”,RALT, IAS, AoA)))
-		socket.try(MySocket:send(string.format("RadAlt [m]: %.4f \t IAS: %.4f \t AoA: %.4f	\t Mach: %.4f \t ss: %.4f \t p: %.4f\n",RALT, IAS, AoA, mach, ss, p)))
+		socket.try(MySocket:send(string.format("RadAlt [m]: %.4f \t IAS: %.4f \t AoA: %.4 \t Mach: %.4f \t ss: %.4f \t p: %.4f \t rud: %.4f\n",RALT, IAS, AoA, mach, ss, p,r)))
 	--/////////////// your code ends here ////////////////////////////
 	
 end
